@@ -10,4 +10,4 @@ I'm Pär Dahlman, the founder, CTO and waterboy at _Fellow Developer_. First and
 I'm a technical consultat, system architect, scrum master and team member that can be a great addition to software teams in all different phases of development. Simply put: a fellow developer at your service.
 
 
-[Get in touch!](/contact)
+If you want to get in touch, write me a line at [hello@fellowdeveloper.se](mailto:hello@fellowdeveloper.se), find me on [Twitter](https://twitter.com/pardahlman) or [LinkedIn](https://se.linkedin.com/in/pardahlman).
