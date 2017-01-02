@@ -4,7 +4,7 @@ email:       hello@fellowdeveloper.se
 author:      Pär Dahlman
 description: "The blog of a fellow developer."
 baseurl:     ""
-url:         "http://www.fellowdeveloper.se"
+url:         "http://fellowdeveloper.se"
 date_format: "%b %-d, %Y"
 
 # Google services
