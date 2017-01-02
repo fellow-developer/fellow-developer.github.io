@@ -6,7 +6,7 @@ categories: security
 summary: Government mass surveillance, Google's plans for Chrome and cost free SSL certificates. 2017 will be an interesting year for internet security, and I've started to align. This is the story of how expensive SSL certs made me change hosting solution for my site, and all the joy it brought.
 ---
 
-## Times are a-chanin'
+## Times are a-changin'
 It was the price of SSL cert that was the tipping point for me. In general, I like paying for high quality services. Companies like [Github](https://github.com) is a perfect example; low up-front cost, easy to use interface and a bunch of useful integrations that _actually_ increases productivity.
 
 Other companies have a different business model, where the only revenue stream steams from the knowledge that people wont go about changing things that _works_, even though it is not an optimal solution.
