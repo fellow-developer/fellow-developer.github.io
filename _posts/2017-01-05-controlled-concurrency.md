@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Controlled concurrency
-date: 2017-01-07 07:25
+date: 2017-01-05 07:25
 categories: dotnet rawrabbit
 ---
 A few days ago, [I asked](https://groups.google.com/forum/#!topic/rabbitmq-users/7CgIDoXGMQU) the RabbitMq community for input on what is missing in todays high level .NET clients. One of the topics that came up was the ability to control the concurrency of messages consumed. This has been [discussed before](https://github.com/pardahlman/RawRabbit/issues/144), so I thought I'd implement it for [RawRabbit](https://github.com/pardahlman/RawRabbit/).
