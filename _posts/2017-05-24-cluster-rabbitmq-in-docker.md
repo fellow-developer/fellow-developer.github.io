@@ -17,7 +17,7 @@ As the author of [RawRabbit](https://github.com/pardahlman/RawRabbit), I have a 
 
 There are [tons of images](https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=rabbitmq+cluster&starCount=0) at Docker Hub for clustering RabbitMQ. As I started to look through the list, though, I realized that most of the images haven't been updated for quite some time. The most reason cluster image I found was lagging months behind.
 
-There is one image that is kept up to date: [the official one](https://hub.docker.com/r/_/rabbitmq/). It is maintained by the docker community and is a pretty safe bet for future releases. What if I could create a RabbitMQ cluster based on this image? Challenge accepted!
+There is one image that is kept up to date: [the official one](https://hub.docker.com/r/_/rabbitmq/)[^1]. It is maintained by the docker community and is a pretty safe bet for future releases. What if I could create a RabbitMQ cluster based on this image? Challenge accepted!
 
 ## Spinning up individual containers
 
@@ -90,3 +90,6 @@ I haven't evaluated the benefits with the load balancer yet, but with this setup
 As I said at the top: the source code for this can be found [at Github](https://github.com/pardahlman/docker-rabbitmq-cluster). Try it out and tell me what you think.
 
 Happy coding!
+
+#### Footnotes
+[^1]: Referring to the [Official repositories on Docker Hub](https://docs.docker.com/docker-hub/official_repos/), curated by Docker.
