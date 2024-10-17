@@ -90,6 +90,7 @@ const config: Config = {
       copyright: `${new Date().getFullYear()} Fellow Developer`,
     },
     prism: {
+      additionalLanguages: ['csharp'],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
