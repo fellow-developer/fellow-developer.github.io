@@ -90,7 +90,7 @@ const config: Config = {
       copyright: `${new Date().getFullYear()} Fellow Developer`,
     },
     prism: {
-      additionalLanguages: ['csharp'],
+      additionalLanguages: ['csharp', 'powershell'],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
