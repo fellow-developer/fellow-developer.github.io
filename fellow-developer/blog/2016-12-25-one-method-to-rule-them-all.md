@@ -1,9 +1,9 @@
 ---
-layout: post
 title: One method to rule them all
-date: 2016-12-25 11:45
-categories: dotnet rawrabbit
+authors: pardahlman
+tags: [dotnet, rawrabbit]
 ---
+
 I wasn't thrilled when [Owin](http://owin.org/) was introduced back in 2012. Sure, I could see the benefits in an abstraction layer between the web server and the application, but I didn't really see the full potential of the ecosystem of [middlewares](https://msdn.microsoft.com/en-us/library/microsoft.owin.owinmiddleware(v=vs.113).aspx) that came about a few months later. Then, for a long time, my only relation to these middleware was through extension methods like
 
 ```csharp
@@ -13,6 +13,9 @@ public void Configuration(IAppBuilder app)
     app.UseBar();
 }
 ```
+
+<!-- truncate -->
+
 Fast-forward to 2016, and things have change. Not only Owin, but the entire [.NET Core](https://dot.net/core) application platform uses this approach to extend and customize applications.
 
 As I planed for the next major release of [RawRabbit](https://github.com/pardahlman/RawRabbit), I had come to appreciate the modularization that middleware provides, and decided to implement a middleware pipeline, realized in a class with one single method. Time and time again I got surprised how powerful this one method is. Without further ado: say hello to `InvokeAsync` on the base class `Middleware`[^1]

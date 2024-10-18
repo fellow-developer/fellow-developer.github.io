@@ -1,4 +1,19 @@
 facebook:
-  label: Development
-  permalink: /development
-  description: Software development
+  label: dotnet
+  permalink: /dotnet
+  description: Blog posts about software development using .NET
+
+rawrabbit:
+  label: rawrabbit
+  permalink: /rawrabbit
+  description: Now abandond OSS project
+
+security:
+  label: security
+  permalink: /security
+  description: Thoughts on internet security and related topics
+
+development-environment:
+  label: development-environment
+  permalink: /development-environment
+  description: Tips and tricks for setting up local development environments

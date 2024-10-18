@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Controlled concurrency
-date: 2017-01-05 07:25
-categories: dotnet rawrabbit
+authors: pardahlman
+tags: [dotnet, rawrabbit]
 ---
+
 A few days ago, [I asked](https://groups.google.com/forum/#!topic/rabbitmq-users/7CgIDoXGMQU) the RabbitMq community for input on what is missing in todays high level .NET clients. One of the topics that came up was the ability to control the concurrency of messages consumed. This has been [discussed before](https://github.com/pardahlman/RawRabbit/issues/144), so I thought I'd implement it for [RawRabbit](https://github.com/pardahlman/RawRabbit/).
+
+<!-- truncate -->
 
 A common reason for wanting to throttle the number of concurrent messages handled is that a high message rate may affect the overall prestandard of the system. If the throughput is in the range of thousands messages per second, and each message involves one or more database read/writes it can easely put unnecessary pressure on the system.
 
@@ -23,10 +25,10 @@ As a default, a `SemaphoreSlim` suffices for concurrency management. This is wha
 The basic usage of a `SemaphoreSlim` is pretty straight-forward
 
 ```csharp
-    var semaphore = new SemaphoreSlim(1,1);
-    await semaphore.WaitAsync();
-    /* entered */
-    semaphore.Release();
+var semaphore = new SemaphoreSlim(1,1);
+await semaphore.WaitAsync();
+/* entered */
+semaphore.Release();
 ```
 
 There are two features of the `SemaphoreSlim` that I want to highlight. The first is that it allows for task based execution. Ever tried to use the `async` keyword in a `lock` statements? Your code wouldn't compile, as it is [simply not allowed](https://msdn.microsoft.com/en-us/library/hh156528.aspx)[^1]. There is no compile time error when using `Monitor.Enter(obj)` together with tasks, but you get a runtime error if you try to exit on a different thread (which isn't surprising since they are [precisely equivalent](https://msdn.microsoft.com/en-us/library/aa664735(v=vs.71).aspx).)
@@ -110,4 +112,4 @@ The control over messaging will be even more granular in 2.0. The client comes w
 
 #### Footnotes
 [^1]: _"an await expression cannot occur in the body of a synchronous function, in a query expression, **in the block of a lock statement**, or in an unsafe context"_
-[^2]: Read more about the middleware in this [earlier post]({% post_url 2016-12-25-one-method-to-rule-them-all %})
+[^2]: Read more about the middleware in this [earlier post](./2016-12-25-one-method-to-rule-them-all.md)

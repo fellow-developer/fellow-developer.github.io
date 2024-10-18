@@ -1,13 +1,13 @@
 ---
-layout: post
 title: The year of secure internet connections
-date: 2017-01-02 08:34
-categories: security
-summary: Government mass surveillance, Google's plans for Chrome and cost free SSL certificates. 2017 will be an interesting year for internet security, and I've started to align. This is the story of how expensive SSL certs made me change hosting solution for my site, and all the joy it brought.
+authors: pardahlman
+tags: [security]
 ---
 
 ## Times are a-changin'
 It was the price of SSL cert that was the tipping point for me. In general, I like paying for high quality services. Companies like [Github](https://github.com) is a perfect example; low up-front cost, easy to use interface and a bunch of useful integrations that _actually_ increases productivity.
+
+<!-- truncate -->
 
 Other companies have a different business model, where the only revenue stream steams from the knowledge that people wont go about changing things that _works_, even though it is not an optimal solution.
 
@@ -32,8 +32,6 @@ It took me about one hour to get TLS working. Azure's [site extensions](https://
 
 I really like that there is a cost and friction free way to get https working. Let's Encrypt is a perfect option for the large segment of middle-sized sites with a too small budget for SSL certs. There are good reasons and arguments for taking the time to secure the sites you are working on. Let's make 2017 about privacy.
 
-
-#### Footnotes
 
 [^1]: Currently [not supported for Github Pages](https://github.com/isaacs/github/issues/156), which is the reason why this blog is still over http.
 [^2]: I do believe that you could follow [this guide](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) to set up a service principal without entering classic mode.

@@ -1,11 +1,12 @@
 ---
-layout: post
 title: No such thing as perfect code
-date: 2017-01-13 17:00
-categories: dotnet rawrabbit
+authors: pardahlman
+tags: [dotnet, rawrabbit]
 ---
 
 The date for the next major release of [RawRabbit](https://github.com/pardahlman/RawRabbit) is drawing nearer. It is more than a year ago since I decided to implement a [.NET Core](https://dot.net/core)[^1] client for [RabbitMq](https://www.rabbitmq.com/). During this time, I've discovered some differences between developing a library and an application.
+
+<!-- truncate -->
 
 ## Application code is your code
 
@@ -23,7 +24,7 @@ A bug in an third party library can have devastating consequences for a project.
 
 Bugs are not the only thing that can slow you down. Assumptions made when creating a library can be just as problematic. Here's an example. If you want to [publish or consume](https://www.rabbitmq.com/tutorials/tutorial-three-dotnet.html) a message over RabbitMq, you need a connection. RawRabbit tries to establish a connection when it is instantiated, so that it can verify that the provided configuration is correct. This means that if something goes wrong the client can throw a clear exception _right when the application starts up_, which in turn can be used to indicate that something went wrong with a deployment.
 
-Makes sense, right? Well, it turns out that there are scenarios[^2] where it makes sense to delay the connection or add some sort of retry policy. [Controlled consume concurrency]({% post_url 2017-01-05-controlled-concurrency %}) is another example of something that was not supported, but important at times.
+Makes sense, right? Well, it turns out that there are scenarios[^2] where it makes sense to delay the connection or add some sort of retry policy. [Controlled consume concurrency](./2017-01-05-controlled-concurrency.md) is another example of something that was not supported, but important at times.
 
 I didn't foresee that, how can this be handled?
 
@@ -50,7 +51,7 @@ I realized that there is no way to predict all the user cases for a client like 
 
 ### Optional options and reasonable defaults
 
-RawRabbit's uses a [middleware architecture]({% post_url 2016-12-25-one-method-to-rule-them-all %}), where each middleware has a corresponding options class. A middleware like `BasicPublishMiddleware` has an optional constructor argument `BasicPublishOptions`. All options classes follow the same pattern and looks something like this
+RawRabbit's uses a [middleware architecture](./2016-12-25-one-method-to-rule-them-all.md), where each middleware has a corresponding options class. A middleware like `BasicPublishMiddleware` has an optional constructor argument `BasicPublishOptions`. All options classes follow the same pattern and looks something like this
 
 ```csharp
 public class BasicPublishOptions

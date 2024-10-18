@@ -1,13 +1,14 @@
 ---
-layout: post
 title: Cluster RabbitMQ in Docker
-date: 2017-05-24 21:15
-categories:
+authors: [pardahlman]
+tags: [development-environment]
 ---
 
-[Docker](http://docker.com/) is the kind of technology that grows on you. A couple of months I barely knew the difference between a container and image, but lately I've been exploring the benefits of using docker to spin up my [local development environment]({% post_url 2017-05-21-local-setup-in-minutes-with-docker %}) and it is impressive how easy it is to getting started.
+[Docker](http://docker.com/) is the kind of technology that grows on you. A couple of months I barely knew the difference between a container and image, but lately I've been exploring the benefits of using docker to spin up my [local development environment](./2017-05-21-local-setup-in-minutes-with-docker.md) and it is impressive how easy it is to getting started.
 
 In this post, I describe how I created [this Github repo](https://github.com/pardahlman/docker-rabbitmq-cluster), that clusters three RabbitMQ servers without building any custom images for it.
+
+<!-- truncate -->
 
 ## RabbitMQ in Docker
 

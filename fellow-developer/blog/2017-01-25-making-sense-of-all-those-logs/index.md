@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Making sense of all those logs
-date: 2017-01-25 08:00
-categories: dotnet
+authors: pardahlman
+tags: [dotnet]
 ---
 
 It is indeed a change of mindset to break up larger applications into smaller, contained services. One aspect of the transition, that is often somewhat overlooked, is the log file havoc that often sneak up on you when you least want it.
@@ -10,6 +9,8 @@ It is indeed a change of mindset to break up larger applications into smaller, c
 Logging is inherently difficult to make _right_. I believe one reason for this is that as a developer, running the application locally, there are better tools available for understanding what's going on. .NET developers has been spoiled by the first class debugging experience in Visual Studio for quite some time. My experience is that logging is often an after-thought to a period of optimistic testing.
 
 > Logging is often an after-thought to a period of optimistic testing.
+
+<!-- truncate -->
 
 The situation does not get any better after the code is released to an clustered production environment. For a medium sized business with a few servers, a couple services/applications (deployed to each server) and RESTful APIs there are easily 50+ applications writing logs at the same time. I don't want to be the one to make sense of these events without the right tools.
 
@@ -45,7 +46,7 @@ Logger.Information(
 
 Note that there is no string interpolation (dollar sign) in the logging statement. This is part of the [Serilog syntax](https://github.com/serilog/serilog/wiki/Writing-Log-Events), that helps storing the data in a [structured way](http://softwareengineering.stackexchange.com/questions/312197/benefits-of-structured-logging-vs-basic-logging). For Elastic, in particular, this means that the values inside `{}` are captured as it's own field that can be indexed and queried. The entry created by the log statement above looks something like this is Kibana
 
-![elastic](/assets/elastic.PNG)
+![elastic](./elastic.PNG)
 
 ## Passing context data to services
 
@@ -105,7 +106,7 @@ The context forwarding looks for an existing message context and uses it if pres
 
 I'm able to filter the logs in Kibana based on execution id, and the only entries I see are the ones I expect
 
-![kibana](/assets/kibana-execution-filtered.PNG)
+![kibana](./kibana-execution-filtered.PNG)
 
 Logging in action! Here are the execution logs from two console apps and one web api. To make more sense of the logs I enriched them with the `application` field.
 

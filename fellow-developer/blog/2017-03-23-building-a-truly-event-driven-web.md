@@ -1,10 +1,12 @@
 ---
-layout: post
 title: A truly event driven web
-date: 2017-03-23 20:00
+authors: pardahlman
+tags: [dotnet, rawrabbit]
 ---
 
 Ever been to one of those aggregating search sites where the result list is populated in chunks, rather than all at once? Ever wondered how it works? Event driven sites are robust, extendable - and if you're on a messaging system like [RabbitMQ](https://www.rabbitmq.com/) and a .NET client like [RawRabbit](https://github.com/pardahlman/RawRabbit), it is pretty easy to get started.
+
+<!-- truncate -->
 
 ## Event driven what?
 

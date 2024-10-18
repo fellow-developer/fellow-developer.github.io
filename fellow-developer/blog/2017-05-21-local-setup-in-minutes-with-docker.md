@@ -1,13 +1,14 @@
 ---
-layout: post
 title: Local setup in minutes
-date: 2017-05-21 15:00
-categories:
+authors: pardahlman
+tags: [development-environment]
 ---
 
 _TL;DR this is a [Docker](https://www.docker.com/) love story. Why spend hours setting up your development environment, when it can be done with a single command? Sort of, anyways._
 
 A couple of months ago, I bought a new PC for .NET development on Windows. Little did I know that it was shipped with a damaged disk that decided to give up only weeks after I had set up my local development environment. By that time, I had installed Erlang, RabbitMQ, Elastic, Kibana, MongoDB, SQL Server and a few other applications I needed.
+
+<!-- truncate -->
 
 It always annoys me when I install Elastic that I also need to install Java, which for some reason never gets added to the `PATH` correctly so I need to fumble around with `JAVA_HOME` directories for a while before I get it right. Also, that command to set up Windows services, `sc`... something? And the space between the equal sign and the argument value. It is something that I need to look up before I get it right.
 
@@ -55,7 +56,7 @@ We'll get back to the volume mapping in a bit.
 
 ### Service Discovery
 
-For my local setup, I use [Elastic Search](https://www.elastic.co/products/elasticsearch) and [Kibana](https://www.elastic.co/products/kibana) for [log aggregation]({% post_url 2017-01-25-making-sense-of-all-those-logs %}). Kibana needs to be able to pull the log entries from Elastic Search. This is where [docker compose's networking features](https://docs.docker.com/compose/networking/) come to play. Docker compose creates a single network and adds DNS entries for each declared service, making them reachable though the name of the container. Here's how I define Elastic Search
+For my local setup, I use [Elastic Search](https://www.elastic.co/products/elasticsearch) and [Kibana](https://www.elastic.co/products/kibana) for [log aggregation](./2017-01-25-making-sense-of-all-those-logs/index.md). Kibana needs to be able to pull the log entries from Elastic Search. This is where [docker compose's networking features](https://docs.docker.com/compose/networking/) come to play. Docker compose creates a single network and adds DNS entries for each declared service, making them reachable though the name of the container. Here's how I define Elastic Search
 
 ```yaml
 elasticsearch:
