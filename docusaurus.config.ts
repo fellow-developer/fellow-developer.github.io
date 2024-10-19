@@ -67,7 +67,7 @@ const config: Config = {
       items: [
         {to: '/about', label: 'About', position: 'right'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/fellow-developer/fellow-developer.github.io/',
           label: 'GitHub',
           position: 'right',
         },
