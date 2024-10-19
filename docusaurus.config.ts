@@ -43,10 +43,6 @@ const config: Config = {
             xslt: true,
           },
           routeBasePath: '/',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -71,7 +67,7 @@ const config: Config = {
       items: [
         {to: '/about', label: 'About', position: 'right'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/fellow-developer/fellow-developer.github.io/',
           label: 'GitHub',
           position: 'right',
         },
