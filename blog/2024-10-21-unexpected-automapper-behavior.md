@@ -15,6 +15,8 @@ A few seconds after the code was deployed errors started to appear in the applic
 
 _That's strange._
 
+<!-- truncate -->
+
 Because this was real life, the profile contained so much mapping of complex objects that is was difficult to identify what had happened. Finally, I managed to create [a small repro app](https://github.com/pardahlman/automapper-repro). Basically `AssertConfigurationIsValid` fails to detect that mapping of concrete types is missing if said type implements interface that is registered. Let's have a look at an example:
 
 ```csharp title="Source types" showLineNumbers
