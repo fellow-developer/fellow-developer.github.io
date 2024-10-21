@@ -1,7 +1,7 @@
 ---
 title: Cluster RabbitMQ in Docker
 authors: [pardahlman]
-tags: [development-environment]
+tags: [tooling]
 ---
 
 [Docker](http://docker.com/) is the kind of technology that grows on you. A couple of months I barely knew the difference between a container and image, but lately I've been exploring the benefits of using docker to spin up my [local development environment](./2017-05-21-local-setup-in-minutes-with-docker.md) and it is impressive how easy it is to getting started.

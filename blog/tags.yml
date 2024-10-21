@@ -13,7 +13,7 @@ security:
   permalink: /security
   description: Thoughts on internet security and related topics
 
-development-environment:
-  label: development-environment
-  permalink: /development-environment
-  description: Tips and tricks for setting up local development environments
+tooling:
+  label: tooling
+  permalink: /tooling
+  description: Posts about tooling to increase productivity or other processes
