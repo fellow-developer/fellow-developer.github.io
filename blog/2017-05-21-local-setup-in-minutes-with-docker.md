@@ -1,7 +1,7 @@
 ---
 title: Local setup in minutes
 authors: pardahlman
-tags: [development-environment]
+tags: [tooling]
 ---
 
 _TL;DR this is a [Docker](https://www.docker.com/) love story. Why spend hours setting up your development environment, when it can be done with a single command? Sort of, anyways._
