@@ -7,25 +7,17 @@ const config: Config = {
   tagline: 'Blog from a fellow developer to another',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://fellowdeveloper.se',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'fellow-developer', // Usually your GitHub org/user name.
-  projectName: 'fellow-developer.github.io', // Usually your repo name.
+  organizationName: 'fellow-developer',
+  projectName: 'fellow-developer.github.io',
   deploymentBranch: 'main',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -43,7 +35,6 @@ const config: Config = {
             xslt: true,
           },
           routeBasePath: '/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -56,7 +47,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       defaultMode: 'dark',
