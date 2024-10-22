@@ -65,12 +65,7 @@ const config: Config = {
     navbar: {
       title: 'Fellow Developer',
       items: [
-        {to: '/about', label: 'About', position: 'right'},
-        {
-          href: 'https://github.com/fellow-developer/fellow-developer.github.io/',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/about', label: 'About', position: 'right'}
       ],
     },
     footer: {
