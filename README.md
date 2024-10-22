@@ -1,7 +1,9 @@
 📚 The blog at [fellowdeveloper.se](https://fellowdeveloper.se).
 
-Get it up and running in docker
+Built with [Docusaurus](https://docusaurus.io/). Previous version that used Jekyll can be found in branch `jekyll`.
+
+Start the application by running
 
 ```
-docker run --rm  --volume="$PWD:/srv/jekyll" --publish 4000:4000 jekyll/jekyll jekyll serve
+yarn start
 ```
